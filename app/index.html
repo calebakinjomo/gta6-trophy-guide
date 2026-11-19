@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a cited guide for each, a saved checklist, filters, spoiler mode and a platinum roadmap.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">VI</div>
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="subtitle">Grand Theft Auto VI &middot; PlayStation 5 &middot; all 55 trophies, offline</p>
+    </div>
+  </div>
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-line"><span id="progress-text">0 / 55 earned</span><span id="progress-pct">0%</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Platinum progress" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div>
+    <div class="grade-counts" id="grade-counts"></div>
+  </div>
+  <div class="top-actions">
+    <label class="spoiler-toggle"><input type="checkbox" id="spoiler-toggle" checked> <span>Hide story spoilers</span></label>
+    <button type="button" id="export-btn" class="btn">Export progress</button>
+    <button type="button" id="import-btn" class="btn">Import progress</button>
+    <input type="file" id="import-file" accept="application/json,.json" hidden>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <a href="#/trophies" class="tab" data-view="trophies">Trophies</a>
+  <a href="#/roadmap" class="tab" data-view="roadmap">Platinum roadmap</a>
+  <a href="#/missables" class="tab" data-view="missables">Missables</a>
+</nav>
+
+<main>
+  <section id="view-trophies" class="view">
+    <div class="filter-bar" id="filter-bar">
+      <div class="kind-chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+      <div class="filter-controls">
+        <label>Grade <select id="grade-filter"><option value="">All grades</option><option>Platinum</option><option>Gold</option><option>Silver</option><option>Bronze</option></select></label>
+        <label>Sort <select id="sort-select"><option value="guide">Guide order</option><option value="grade">By grade</option><option value="name">A–Z</option></select></label>
+        <label class="hide-earned"><input type="checkbox" id="hide-earned"> Hide earned</label>
+        <input type="search" id="search-box" placeholder="Search trophies…" aria-label="Search trophies">
+      </div>
+    </div>
+    <p class="list-note" id="list-note"></p>
+    <div class="trophy-layout">
+      <ol class="trophy-list" id="trophy-list"></ol>
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div class="roadmap-intro" id="roadmap-intro"></div>
+    <ol class="roadmap-stages" id="roadmap-stages"></ol>
+    <div class="warnings" id="roadmap-warnings"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div class="missable-intro">
+      <h2>Missable trophies</h2>
+      <p>Exactly one trophy can be missed. Everything else can be earned after the story, in free roam.</p>
+    </div>
+    <div id="missable-list"></div>
+    <div class="warnings" id="missable-warnings"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Official trophy names, descriptions and grades as PlayStation publishes them, checked 19 November 2026 against GTABase, PowerPyx and Output Lag, which agree on all 55. Every guide is written in our own words and cites its sources beside it — a source is cited, never copied. Five methods were still unconfirmed at launch and are marked as such; never trust a method with no source.</p>
+  <p class="sources">Sources: <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series">GTABase</a> &middot; <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx</a> &middot; <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag</a></p>
+  <p class="disclaimer">Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or Sony Interactive Entertainment. No Rockstar logo, artwork or game screenshots are used. Progress is stored only in your browser (localStorage).</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
